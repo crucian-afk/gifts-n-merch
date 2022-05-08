@@ -47,3 +47,5 @@ export type Comment = {
   email: string,
   body: string,
 }
+
+export type CommentsType = Comment[]
