@@ -37,6 +37,8 @@ export type Post = {
   body: string,
 }
 
+export type PostsType = Post[]
+
 // Comment
 export type Comment = {
   postId: number,

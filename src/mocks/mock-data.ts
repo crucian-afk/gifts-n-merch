@@ -21,8 +21,8 @@ export const users: User[] = [
     company: {
       name: 'Romaguera-Crona',
       catchPhrase: 'Multi-layered client-server neural-net',
-      bs: 'harness real-time e-markets'
-    }
+      bs: 'harness real-time e-markets',
+    },
   },
   {
     id: 2,
@@ -67,7 +67,7 @@ export const users: User[] = [
     company: {
       name: 'Deckow-Crist',
       catchPhrase: 'Proactive didactic contingency',
-      bs: 'synergize scalable supply-chains'
+      bs: 'synergize scalable supply-chains',
     },
   },
 ];
@@ -99,20 +99,20 @@ export const comments: Comment[] = [
     id: 1,
     name: 'id labore ex et quam laborum',
     email: 'Eliseo@gardner.biz',
-    body: 'laudantium enim quasi est quidem magnam voluptate ipsam eos\ntempora quo necessitatibus\ndolor quam autem quasi\nreiciendis et nam sapiente accusantium'
+    body: 'laudantium enim quasi est quidem magnam voluptate ipsam eos\ntempora quo necessitatibus\ndolor quam autem quasi\nreiciendis et nam sapiente accusantium',
   },
   {
     postId: 2,
     id: 6,
     name: 'et fugit eligendi deleniti quidem qui sint nihil autem',
     email: 'Presley.Mueller@myrl.com',
-    body: 'doloribus at sed quis culpa deserunt consectetur qui praesentium\naccusamus fugiat dicta\nvoluptatem rerum ut voluptate autem\nvoluptatem repellendus aspernatur dolorem in'
+    body: 'doloribus at sed quis culpa deserunt consectetur qui praesentium\naccusamus fugiat dicta\nvoluptatem rerum ut voluptate autem\nvoluptatem repellendus aspernatur dolorem in',
   },
   {
     postId: 1,
     id: 1,
     name: 'id labore ex et quam laborum',
     email: 'Eliseo@gardner.biz',
-    body: 'laudantium enim quasi est quidem magnam voluptate ipsam eos\ntempora quo necessitatibus\ndolor quam autem quasi\nreiciendis et nam sapiente accusantium'
+    body: 'laudantium enim quasi est quidem magnam voluptate ipsam eos\ntempora quo necessitatibus\ndolor quam autem quasi\nreiciendis et nam sapiente accusantium',
   },
 ];
