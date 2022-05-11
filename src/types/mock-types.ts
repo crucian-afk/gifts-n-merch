@@ -1,4 +1,4 @@
-// User
+// Users
 export type User = {
   id: number,
   name: string,
@@ -9,6 +9,8 @@ export type User = {
   website: string,
   company: Company,
 }
+
+export type Users = User[]
 
 export type Address = {
   street: string,

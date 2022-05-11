@@ -27,7 +27,7 @@ export const users: User[] = [
   {
     id: 2,
     name: 'Сергей',
-    username: 'Sirgay',
+    username: 'Sergey137',
     email: 'Shanna@melissa.tv',
     address: {
       street: 'Victor Plains',
@@ -48,7 +48,7 @@ export const users: User[] = [
     },
   },
   {
-    id: 2,
+    id: 3,
     name: 'Ибрагим',
     username: 'Ibra',
     email: 'Shanna@melissa.tv',
