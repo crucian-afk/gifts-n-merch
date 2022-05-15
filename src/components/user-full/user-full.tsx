@@ -1,5 +1,7 @@
 import {Users} from '../../types/mock-types';
-import {Params, useParams} from 'react-router-dom';
+import {Link, Params, useParams} from 'react-router-dom';
+import {Button} from 'antd';
+import {AppRoute} from '../../const';
 
 type userFullProps = {
   users: Users
@@ -11,7 +13,6 @@ type paramsProps = {
 
 export default function UserFull({users}: userFullProps): JSX.Element {
   const params: Readonly<[paramsProps] extends [string] ? Params<paramsProps> : Partial<paramsProps>> = useParams();
-  console.log(params);
   const currentId = Number(params.id);
   const currentIndex = users.findIndex((user) => user.id === currentId);
   const currentUser = users[currentIndex];
@@ -19,7 +20,7 @@ export default function UserFull({users}: userFullProps): JSX.Element {
   newUsers.splice(currentIndex, 1);
   const {id, username, email, address: {street, city, suite, zipcode}, website, company, name, phone } = currentUser;
   return (
-    <>
+    <div className="user-info">
       <p>ID: {id}</p>
       <p>Username: {username}</p>
       <p>Name: {name}</p>
@@ -28,6 +29,9 @@ export default function UserFull({users}: userFullProps): JSX.Element {
       <p>Website: {website}</p>
       <p>Work at: {company.name}</p>
       <p>Phone: {phone}</p>
-    </>
+      <Link to={AppRoute.Users}>
+        <Button type="default" block>Back to Users</Button>
+      </Link>
+    </div>
   );
 }

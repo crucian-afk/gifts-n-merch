@@ -7,6 +7,7 @@ import {AppRoute} from '../../const';
 import {posts, users} from '../../mocks/mock-data';
 import PostFull from '../post-full/post-full';
 import UserFull from '../user-full/user-full';
+import './App.css';
 
 export default function App(): JSX.Element {
   return (

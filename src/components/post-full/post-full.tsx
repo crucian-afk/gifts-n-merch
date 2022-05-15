@@ -1,6 +1,8 @@
 import {PostsType} from '../../types/mock-types';
-import {useParams} from 'react-router-dom';
+import {Link, useParams} from 'react-router-dom';
 import Comments from '../comments/comments';
+import {Button} from 'antd';
+import {AppRoute} from '../../const';
 
 type postFullProps = {
   posts: PostsType;
@@ -19,7 +21,7 @@ export default function PostFull({posts}: postFullProps): JSX.Element {
   newPosts.splice(currentIndex, 1);
   const {id, title, body, userId} = currentPost;
   return (
-    <>
+    <div className="container">
       <div>
         <p>ID: {id}</p>
         <p>User ID: {userId}</p>
@@ -27,6 +29,9 @@ export default function PostFull({posts}: postFullProps): JSX.Element {
         <p>{body}</p>
       </div>
       <Comments postId={currentId} />
-    </>
+      <Link to={AppRoute.Root}>
+        <Button type="default" block>Back to main page</Button>
+      </Link>
+    </div>
   );
 }

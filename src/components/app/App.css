@@ -1,0 +1,72 @@
+@import '~antd/dist/antd.css';
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.return-button {
+  display: block;
+  margin: 0 auto;
+}
+
+.posts,
+.users {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 10px;
+  text-transform: capitalize;
+}
+
+.card {
+  border: 1px solid #e2e2e2;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  transition: .3s;
+}
+
+.post__text {
+  flex-grow: 1;
+}
+
+.post__user-id {
+  font-size: 0.9em;
+  color: #2c2c2c;
+}
+
+.comments {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.comments__title {
+  text-align: center;
+}
+
+.nickname {
+  text-transform: capitalize;
+  font-weight: 500;
+}
+
+.comment {
+  padding: 20px;
+  margin-bottom: 10px;
+  transition: .3s;
+}
+
+.card:hover,
+.comment:hover {
+  box-shadow: 0 0 6px 0 #d1d1d1;
+  transition: .3s;
+}
+
+.users {
+  margin-bottom: 20px;
+}
+
+.user-info {
+  max-width: 350px;
+  margin: 0 auto;
+}
