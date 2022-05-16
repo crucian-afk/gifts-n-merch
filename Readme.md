@@ -9,5 +9,5 @@ See [DEMO](https://crucian-afk.github.io/PP-posts-page)
 * React 17
 * [TBA] Redux, Redux Toolkit, Redux thunk
 * Typescript
-* [TBA] Ant Design
+* Ant Design
 * [TBA] Unit tests with Jest

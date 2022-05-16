@@ -23,8 +23,8 @@ export default function PostFull({posts}: postFullProps): JSX.Element {
   return (
     <div className="container">
       <div>
-        <p>ID: {id}</p>
-        <p>User ID: {userId}</p>
+        <span className="id-info">ID: {id}</span>
+        <span className="id-info">User ID: {userId}</span>
         <h3>Title: {title}</h3>
         <p>{body}</p>
       </div>

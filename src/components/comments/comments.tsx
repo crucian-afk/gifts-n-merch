@@ -1,5 +1,6 @@
 import {comments} from '../../mocks/mock-data';
 import CommentFull from '../comment-full/comment-full';
+import CommentForm from '../comment-form/comment-form';
 
 type commentsProps = {
   postId: number;
@@ -8,11 +9,14 @@ type commentsProps = {
 export default function Comments({postId}: commentsProps): JSX.Element {
   const currentComments = comments.filter((comment) => comment.postId === postId);
   return (
-    <div className="comments">
-      <p className="comments__title">Oh, just take a look at these comments</p>
-      {currentComments.map((comment) => (
-        <CommentFull key={comment.id} comment={comment} />
-      ))}
-    </div>
+    <>
+      <div className="comments">
+        <p className="comments__title">Oh, just take a look at these comments</p>
+        {currentComments.map((comment) => (
+          <CommentFull key={comment.id} comment={comment} />
+        ))}
+      </div>
+      <CommentForm />
+    </>
   );
 }

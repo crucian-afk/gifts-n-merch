@@ -70,3 +70,18 @@
   max-width: 350px;
   margin: 0 auto;
 }
+
+.comment-form {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.comment-form__title {
+  text-align: center;
+}
+
+.id-info {
+  color: #2c2c2c;
+  margin-right: 20px;
+  font-size: 0.8em;
+}
