@@ -51,3 +51,17 @@ export type Comment = {
 }
 
 export type CommentsType = Comment[]
+
+export type Product = {
+  type: string,
+  id: number,
+  name: string,
+  shortName: string,
+  price: number,
+  size: string,
+  color: string,
+  fabric: string,
+  description: string,
+}
+
+export type Products = Product[]

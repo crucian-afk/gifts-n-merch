@@ -1,6 +1,5 @@
-import {Link} from 'react-router-dom';
-import {AppRoute} from '../../const';
-import {Result, Button} from 'antd';
+import {Result} from 'antd';
+import ReturnButton from '../return-button/return-button';
 
 export default function NotFound() {
   return (
@@ -8,9 +7,7 @@ export default function NotFound() {
       <Result status="404" />
       <div className="container">
         <p style={{textAlign: 'center'}}>Sorry, cannot find that page</p>
-        <Link to={AppRoute.Root}>
-          <Button type="primary" className="return-button">Back to index</Button>
-        </Link>
+        <ReturnButton />
       </div>
     </>
   );

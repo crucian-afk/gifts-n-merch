@@ -3,5 +3,9 @@ export enum AppRoute {
   Post = '/post/:id',
   Comments = '/comments',
   Users = '/users',
-  Person = '/person/:id'
+  Person = '/person/:id',
+  Products = '/products',
+  Product = '/good/:type/:id',
+  UnderConstruction = '/develop',
+  Cart = '/cart'
 }

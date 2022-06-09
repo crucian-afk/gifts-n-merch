@@ -1,0 +1,86 @@
+{
+  "caps": [
+    {
+      "type": "cap",
+      "id": 1,
+      "name": "CP001 Cap #1",
+      "price": 500,
+      "size": "M",
+      "color": "green",
+      "fabric": "100% cotton",
+      "description": "Зеленая шапка"
+    },
+    {
+      "type": "cap",
+      "id": 2,
+      "name": "CP001 Cap #2",
+      "price": 600,
+      "size": "M",
+      "color": "blue",
+      "fabric": "60% cotton, 40% synthetic",
+      "description": "Синяя шапка"
+    },
+    {
+      "type": "cap",
+      "id": 3,
+      "name": "CP001 Cap #3",
+      "price": 700,
+      "size": "M",
+      "color": "yellow",
+      "fabric": "95% cotton, 5% elastan",
+      "description": "Желтая шапка"
+    },
+    {
+      "type": "cap",
+      "id": 4,
+      "name": "CP001 Cap #4",
+      "price": 800,
+      "size": "M",
+      "color": "black",
+      "fabric": "70% cotton, 30% lycra",
+      "description": "Черная шапка"
+    }
+  ],
+  "hoodies": [
+    {
+      "type": "hoodie",
+      "id": 1,
+      "name": "HD001 Hoodie #1",
+      "price": 1200,
+      "size": "S",
+      "color": "violet",
+      "fabric": "100% cotton",
+      "description": "Фиолетовая толстовка"
+    },
+    {
+      "type": "hoodie",
+      "id": 2,
+      "name": "HD002 Hoodie #1",
+      "price": 1200,
+      "size": "M",
+      "color": "violet",
+      "fabric": "100% cotton",
+      "description": "Фиолетовая толстовка"
+    },
+    {
+      "type": "hoodie",
+      "id": 3,
+      "name": "HD003 Hoodie #1",
+      "price": 1200,
+      "size": "L",
+      "color": "violet",
+      "fabric": "100% cotton",
+      "description": "Фиолетовая толстовка"
+    },
+    {
+      "type": "hoodie",
+      "id": 4,
+      "name": "HD004 Hoodie #1",
+      "price": 1200,
+      "size": "S",
+      "color": "violet",
+      "fabric": "100% cotton",
+      "description": "Фиолетовая толстовка"
+    }
+  ]
+}

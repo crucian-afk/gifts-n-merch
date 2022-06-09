@@ -1,5 +1,11 @@
 @import '~antd/dist/antd.css';
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -21,7 +27,6 @@
 
 .card {
   border: 1px solid #e2e2e2;
-  padding: 20px;
   display: flex;
   flex-direction: column;
   transition: .3s;
@@ -85,3 +90,4 @@
   margin-right: 20px;
   font-size: 0.8em;
 }
+
