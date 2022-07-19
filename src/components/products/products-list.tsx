@@ -14,7 +14,7 @@ export default function ProductsList({goods}: productsProps) {
         {goods
           .filter((item) => item.type !== 'promo')
           .map((item) => (
-            <Good item={item} key={Math.random()} />
+            <Good item={item} key={item.id} />
           ))}
       </ul>
       <ReturnButton />

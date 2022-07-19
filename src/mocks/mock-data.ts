@@ -153,7 +153,7 @@ export const goods: Products = [
   {
     type: 'cap',
     id: 2,
-    name: 'CP001 Cap #2',
+    name: 'CP002 Cap #2',
     shortName: 'cap',
     price: 600,
     size: 'M',
@@ -164,7 +164,7 @@ export const goods: Products = [
   {
     type: 'cap',
     id: 3,
-    name: 'CP001 Cap #3',
+    name: 'CP003 Cap #3',
     shortName: 'cap',
     price: 700,
     size: 'M',
@@ -175,7 +175,7 @@ export const goods: Products = [
   {
     type: 'cap',
     id: 4,
-    name: 'CP001 Cap #4',
+    name: 'CP004 Cap #4',
     shortName: 'cap',
     price: 800,
     size: 'M',

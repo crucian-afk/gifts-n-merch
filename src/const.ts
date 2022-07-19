@@ -9,3 +9,9 @@ export enum AppRoute {
   UnderConstruction = '/develop',
   Cart = '/cart'
 }
+
+export enum ProductType {
+  'hoodie' = 'толстовка',
+  'cap' = 'шапка',
+  'shopper' = 'шоппер'
+}

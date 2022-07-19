@@ -1,8 +1,10 @@
 import {useParams} from 'react-router-dom';
-import {Products} from '../../types/mock-types';
+import {Product, Products} from '../../types/mock-types';
 import './product-full.css';
 import {Button, Rate} from 'antd';
 import {useState} from 'react';
+import {useAppDispatch} from '../../hooks';
+import {addProduct} from '../../store/cart/cart-slice';
 
 type paramsProps = {
   id: string;
@@ -13,6 +15,12 @@ type productFullProps = {
 }
 
 export default function ProductFull({products}: productFullProps) {
+  const dispatch = useAppDispatch();
+  const handleCartClick = (item: Product) => {
+    dispatch(addProduct(item));
+  };
+
+
   const params: paramsProps = useParams() as paramsProps;
   const currentId = Number(params.id);
   const currentIndex = products.findIndex((product) => product.id === currentId);
@@ -22,7 +30,6 @@ export default function ProductFull({products}: productFullProps) {
   const {id, price, size, color, name, fabric, type, description, shortName} = currentProduct;
   const [rateValue, setRateValue] = useState(3);
   const desc = ['ужас', 'плохо', 'средне', 'неплохо', 'отлично'];
-  const [inCart, setInCart] = useState(false);
 
   return (
     <div className="container product__info">
@@ -39,7 +46,8 @@ export default function ProductFull({products}: productFullProps) {
         <Rate tooltips={desc} onChange={setRateValue} value={rateValue} />
         {rateValue && <span className="ant-rate-text">{desc[rateValue - 1]}</span>}
       </div>
-      <Button type="primary" onClick={() => setInCart(true)}>{inCart ? 'В корзине' : 'Добавить в корзину'}</Button>
+      {/*<Button type="primary" onClick={handleCartClick}>{inCart ? 'В корзине' : 'Добавить в корзину'}</Button>*/}
+      <Button type="primary" onClick={() => handleCartClick(currentProduct)}>Добавить в корзину</Button>
     </div>
   );
 }
