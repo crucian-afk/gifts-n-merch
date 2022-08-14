@@ -10,8 +10,8 @@ export enum AppRoute {
   Cart = '/cart'
 }
 
-export enum ProductType {
-  'hoodie' = 'толстовка',
-  'cap' = 'шапка',
-  'shopper' = 'шоппер'
-}
+export const ProductType = {
+  hoodie: 'Толстовка',
+  cap: 'Шапка',
+  shopper: 'Шоппер',
+};

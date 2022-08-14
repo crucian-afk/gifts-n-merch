@@ -46,7 +46,6 @@ export default function ProductFull({products}: productFullProps) {
         <Rate tooltips={desc} onChange={setRateValue} value={rateValue} />
         {rateValue && <span className="ant-rate-text">{desc[rateValue - 1]}</span>}
       </div>
-      {/*<Button type="primary" onClick={handleCartClick}>{inCart ? 'В корзине' : 'Добавить в корзину'}</Button>*/}
       <Button type="primary" onClick={() => handleCartClick(currentProduct)}>Добавить в корзину</Button>
     </div>
   );

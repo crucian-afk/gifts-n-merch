@@ -5,7 +5,6 @@
 }
 
 .product__item {
-  /*border: 1px solid black;*/
   max-width: 350px;
   display: flex;
   flex-direction: column;

@@ -1,3 +1,17 @@
+.cart-items {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-width: 65%;
+}
+.cart-list {
+  display: flex;
+}
 .cart-item {
-  background: grey;
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: 0 0 10px -3px #2c2c2c;
+}
+.cart-total {
+  flex-grow: 1;
 }
