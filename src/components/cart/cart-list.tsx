@@ -6,6 +6,8 @@ import {addProduct, deleteProduct, reduceProduct} from '../../store/cart/cart-sl
 import {Product} from '../../types/mock-types';
 import {useSelector} from 'react-redux';
 import {cartTotalPriceSelector} from '../../store/selectors/selectors';
+import {AppRoute} from '../../const';
+import {Link} from 'react-router-dom';
 
 export default function CartList() {
   const dispatch = useAppDispatch();
@@ -39,7 +41,7 @@ export default function CartList() {
         <div className="cart-total">
           <p>Всего элементов</p>
           <p>Общая сумма: {totalPrice}</p>
-          <button>Оформить заказ</button>
+          <Link className="ant-btn ant-btn-default" to={AppRoute.Order}>Перейти к оформлению</Link>
         </div>
       </div>
     );

@@ -26,9 +26,6 @@ export default function Good({item}: productProps): JSX.Element {
         <p>&#8381; {price}</p>
         <p>type {type}</p>
       </div>
-      <Link className="product__link" to={generatePath(`/good/${type}/:id`, {id: String(id)})}>
-        <Button className="product__link-button" type="primary">Подробнее</Button>
-      </Link>
       <Button className="product__link-button" type="primary" onClick={handleClick}>Добавить в корзину</Button>
     </li>
   );

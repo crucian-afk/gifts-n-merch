@@ -4,6 +4,7 @@ import {AppRoute} from '../../const';
 import {goods} from '../../mocks/mock-data';
 import './App.css';
 import ProductFull from '../product-full/product-full';
+import {OrderForm} from '../order/order-form';
 import ProductsList from '../products/products-list';
 import PromoProducts from '../promo-products/promo-products';
 import NotReadyYet from '../not-ready-yet/not-ready-yet';
@@ -13,7 +14,7 @@ import {Provider} from 'react-redux';
 import {store} from '../../store';
 
 export default function App(): JSX.Element {
-  const {Root, Products, Product, UnderConstruction, Cart} = AppRoute;
+  const {Root, Products, Product, UnderConstruction, Cart, Order} = AppRoute;
   return (
     <Provider store={store}>
       <BrowserRouter>
@@ -24,6 +25,7 @@ export default function App(): JSX.Element {
             <Route path={Product} element={<ProductFull products={goods} />} />
             <Route path={UnderConstruction} element={<NotReadyYet />} />
             <Route path={Cart} element={<CartList />} />
+            <Route path={Order} element={<OrderForm />} />
           </Route>
           <Route path="*" element={<NotFound />} />
         </Routes>

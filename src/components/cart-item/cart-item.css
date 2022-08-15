@@ -1,21 +1,54 @@
+/*Карточка товара в корзине*/
+.cart-content {
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: 0 0 10px -3px #2c2c2c;
+}
 .cart-item {
   display: flex;
   gap: 10px;
 }
 .cart-item__info {
-  display: flex;
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 10px;
   position: relative;
+  flex-grow: 1;
 }
 .cart-item__image {
   position: relative;
-  max-width: 200px;
+  max-width: 135px;
 }
 .cart-item__promo {
   position: absolute;
-  font-weight: bold;
+  /*font-weight: bold;*/
   color: #fff;
-  padding: 5px;
+  padding: 5px 10px;
   background-color: #1890ff;
+  border-radius: 5px;
 }
 .cart-item__link {
+  display: block;
+}
+.cart-item__size {
+  background-color: #1890ff;
+  font-weight: bold;
+  color: #ffffff;
+  border-radius: 15px;
+  padding: 2px 9px;
+}
+.cart__item-id {
+  font-size: 0.8em;
+}
+.cart-item__quantity {
+  font-weight: bold;
+  margin: 0 15px;
+}
+.cart-item__price {
+  font-weight: bold;
+  font-size: 1.2em;
+}
+/*Блок с общей стоимостью*/
+.cart-total {
+  padding: 10px;
 }
