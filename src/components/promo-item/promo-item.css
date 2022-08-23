@@ -1,0 +1,33 @@
+.promo-list {
+  display: flex;
+  list-style-type: none;
+  margin-top: 30px;
+  gap: 10px;
+}
+.promo__item {
+  max-width: 200px;
+}
+.popular {
+  margin-top: -87px;
+  padding-top: 87px;
+}
+.popular__heading {
+  display: flex;
+  justify-content: space-between;
+}
+.promo__link {
+  color: #000000;
+  font-size: 1.2em;
+  padding-right: 60px;
+  position: relative;
+}
+.promo__link::after {
+  content: '';
+  position: absolute;
+  width: 50px;
+  height: 10px;
+  right: 0;
+  top: 11px;
+  background-image: url("../../../public/img/arrow_left.svg");
+  background-repeat: no-repeat;
+}

@@ -1,8 +1,189 @@
-.promo-list {
+.uppercase {
+  text-transform: uppercase;
+}
+.promo {
+  position: relative;
+  background-image:
+    url("../../../public/img/bg_promo.png"),
+    linear-gradient(to top left, #9796F0, #FBC7D4);
+  background-repeat: no-repeat;
+  background-position: 70% 0;
+  background-size: contain;
+  padding-bottom: 87px;
+  border-bottom-right-radius: 50% 10%;
+}
+.section__title {
+  font-weight: bold;
+  font-size: 2em;
+}
+.promo__large-text {
+  font-weight: bold;
+  font-size: 3em;
+  text-transform: uppercase;
+  max-width: 50%;
+  margin-bottom: 20px;
+}
+.promo__under-large {
+  max-width: 50%;
+  margin-bottom: 30px;
+  font-size: 1.3em;
+}
+.promo__features {
+  display: flex;
+  align-items: end;
+}
+.promo__feature {
+  font-size: 1.2em;
+  padding-top: 130px;
+  position: relative;
+  width: 186px;
+  text-align: center;
+}
+.promo__feature::before {
+  content: '';
+  width: 100px;
+  height: 100px;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+  background: url("../../../public/img/promo-circle.svg") no-repeat;
+}
+.sets {
+  background-color: #EEF1F6;
+  background-image: url("../../../public/img/promo_sets.png");
+  background-repeat: no-repeat;
+  background-position: 75% 0;
+  background-size: contain;
+  padding: 75px 0;
+  border-top-left-radius: 14% 8%;
+  border-bottom-right-radius: 14% 6%;
+}
+.sets *~.section__title,
+.sets__description {
+  max-width: 50%;
+  margin-bottom: 2em;
+}
+.sets__link {
+  padding: 10px 35px;
+  background-color: #000000;
+  color: #FFFFFF;
+  border-radius: 20px;
+}
+.merch .container {
   display: flex;
 }
-
-.promo__title {
-  font-weight: 600;
-  font-size: 2em;
+.merch-slider {
+  display: flex;
+}
+.merch-slider__element {
+  width: 130px;
+  height: 130px;
+}
+.merch-slider__image {
+  width: 100%;
+}
+.merch__image {
+  width: 50%;
+}
+.merch__description {
+  width: 50%;
+  margin-bottom: 60px;
+}
+.contact-us {
+  padding: 40px 0;
+  border-top-right-radius: 14% 8%;
+  border-bottom-left-radius: 14% 6%;
+  background-image: linear-gradient(to bottom right, #9796F0, #FBC7D4);
+  background-repeat: no-repeat;
+  background-position: 75% 20%;
+  background-size: contain;
+}
+.contact-us .container {
+  position: relative;
+}
+.merch-form__text {
+  width: 50%;
+  margin-bottom: 30px;
+}
+.merch__background {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 500px;
+  height: auto;
+}
+.merch-form__inputs {
+  display: flex;
+  justify-content: space-between;
+}
+.merch-form__label {
+  min-width: 22%;
+}
+.merch-form__input {
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid #808080;
+  background-color: transparent;
+}
+.merch-form__input:focus {
+  outline: 2px dashed #808080;
+  border: none;
+}
+.partners {
+  padding: 50px 0;
+}
+.partners-list {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.footer {
+  /*background-image: url("../../../public/img/curve-background.svg");*/
+  background-color: #EAE6EF;
+}
+.background-curve {
+  width: 100%;
+  height: auto;
+  margin-top: -6px;
+}
+.footer__logo {
+  margin-bottom: 30px;
+}
+.footer__layout {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+.footer__contact-form {
+  max-width: 285px;
+  position: relative;
+}
+.footer__phone {
+  margin-top: 30px;
+  margin-bottom: 0;
+  font-weight: bold;
+}
+.footer__email {
+  text-decoration: underline;
+}
+.footer__contact-input {
+  padding: 10px;
+  border: 2px solid black;
+  border-radius: 10px;
+  width: 100%;
+}
+.footer__submit-button {
+  position: absolute;
+  right: 6px;
+  top: 6px;
+  background-color: #524983;
+  border-radius: 50%;
+  width: 34px;
+  height: 34px;
+  border: none;
+  background-image: url("../../../public/img/arrow_right.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
 }

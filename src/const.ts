@@ -8,7 +8,8 @@ export enum AppRoute {
   Product = '/good/:type/:id',
   UnderConstruction = '/develop',
   Cart = '/cart',
-  Order = '/order'
+  Order = '/order',
+  Sets = '/sets'
 }
 
 export const ProductType = {

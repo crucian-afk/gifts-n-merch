@@ -4,6 +4,7 @@ import './cart-item.css';
 import {generatePath, Link} from 'react-router-dom';
 import {Button} from 'antd';
 import {PlusOutlined, MinusOutlined, DeleteOutlined} from '@ant-design/icons';
+import {colorIcon} from '../utils/utils';
 
 type CartItemProps = {
   product: Product & { cartQuantity: number };
@@ -15,13 +16,6 @@ type CartItemProps = {
 
 export default function CartItem({product, addHandler, reduceHandler, deleteHandler, quantity}: CartItemProps) {
   const {type, description, shortName, name, price, size, color, id, fabric} = product;
-  const style = {
-    backgroundColor: color.split('/')[0],
-    width: '20px',
-    height: '20px',
-    borderRadius: '50%',
-    display: 'inline-block',
-  };
   // eslint-disable-next-line @typescript-eslint/ban-ts-comment
   // @ts-ignore
   const productName: string = ProductType[shortName];
@@ -37,7 +31,7 @@ export default function CartItem({product, addHandler, reduceHandler, deleteHand
           <div className="cart-item__specs">
             <Link className="cart-item__link" to={generatePath(`/good/${type}/:id`, {id: String(id)})}>{productName} {name}</Link>
             <span className="cart-item__size" aria-label="размер" title="размер">{size}</span>
-            <p>Цвет: <span style={style} /></p>
+            <p>Цвет: <span style={colorIcon(color)} /></p>
             <p>Состав: {fabric}</p>
             <p>{description}</p>
           </div>

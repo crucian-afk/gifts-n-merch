@@ -1,21 +1,32 @@
+.header {
+  background-image: linear-gradient(to bottom left, #9796F0, #FBC7D4);
+}
 .header__links {
+  background-color: rgba(250, 251, 253, 0.44);
+}
+.header__links .container {
   display: flex;
   flex-wrap: wrap;
 }
-
 .header__link {
   margin-right: 20px;
+  font-weight: bold;
 }
-
 .header__link--disabled {
   color: rgba(0, 0, 0, 0.5);
 }
-
 .header__link--right {
   flex-grow: 1;
   text-align: right;
 }
-
 .active {
   color: tomato;
+}
+.header-top {
+  display: flex;
+  justify-content: space-between;
+}
+.header-top .green-button {
+  font-size: 1.2em;
+  font-weight: bold;
 }

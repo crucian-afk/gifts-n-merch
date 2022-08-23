@@ -1,6 +1,9 @@
 import {Products} from '../../types/mock-types';
-import Good from '../good/good';
 import './promo-products.css';
+import {Link} from 'react-router-dom';
+import {AppRoute} from '../../const';
+import PromoItem from '../promo-item/promo-item';
+import {handleSubmit} from '../utils/utils';
 
 type promoProps = {
   goods: Products;
@@ -10,53 +13,139 @@ type promoProps = {
 export default function PromoProducts({goods, type = 'promo'}: promoProps): JSX.Element {
   const filteredGoods = goods.filter((item) => item.type === 'promo');
   return (
-    <div className="container">
-      <h1 className="promo__title">Самое популярное</h1>
-      <ul className="promo-list">
-        {filteredGoods.map((good) => (
-          <Good item={good} key={good.id} />
-        ))}
-      </ul>
-    </div>
+    <>
+      <section className="promo">
+        <div className="container">
+          <h1 className="visually-hidden">Магазин подарков Гифтс энд мерч</h1>
+          <p className="promo__large-text">Свежее дыхание в корпоративной жизни</p>
+          <p className="promo__under-large">Мы усовершенствовали процесс заказа продукции для того, чтобы вы и ваша компания сконцентрировались на основных задачах и достигали поставленных целей.</p>
+          <div className="promo__features">
+            <div className="promo__feature">Высокое качество <b>ONLY</b></div>
+            <div className="promo__feature">Поддержка менеджера <b>24/7</b></div>
+            <div className="promo__feature">Выполнение заказа в <b>TURBO-режиме</b></div>
+          </div>
+        </div>
+      </section>
+      <section className="popular">
+        <div className="container">
+          <div className="popular__heading">
+            <div className="popular__title">
+              <h2 className="section__title">Самое популярное</h2>
+              <span>Товары, которые наиболее часто заказывают наши клиенты</span>
+            </div>
+            <Link className="promo__link" to={AppRoute.Products}>Все товары</Link>
+          </div>
+          <ul className="promo-list">
+            {filteredGoods.map((good) => (
+              <PromoItem item={good} key={good.id} />
+            ))}
+          </ul>
+        </div>
+      </section>
+      <section className="sets">
+        <div className="container">
+          <img src="./img/promo_image_creative.svg" alt="Надпись Creative разноцветным шрифтом"/>
+          <h2 className="section__title">Хотите удивить ваших коллег/партнеров необычными подарками?</h2>
+          <p className="sets__description">Выбирайте готовые подарочные наборы или укажите критерии по которым мы соберем для Вас уникальный бокс.</p>
+          <Link className="sets__link" to={AppRoute.Sets}>Перейти к наборам</Link>
+        </div>
+      </section>
+      <section className="merch">
+        <div className="container">
+          <img className="merch__image" src="./img/promo_production.png" alt="Пример мерча"/>
+          <div className="merch-description">
+            <h2 className="section__title">Помимо готовой продукции высокого качества, мы можем для Вас произвести одежду, аксессуары, вкусности и другое под заказ.</h2>
+            <p>Благодаря личному производству мы изготавливаем большие партии в короткие сроки, а так же у Вас всегда есть возможность кастомизировать изделия.</p>
+            <div className="merch-slider">
+              <div className="merch-slider__element">
+                <img className="merch-slider__image" src="./img/promo_prod_slider_1.png" alt="Элемент слайдера"/>
+              </div>
+              <div className="merch-slider__element">
+                <img className="merch-slider__image" src="./img/promo_prod_slider_2.png" alt="Элемент слайдера"/>
+              </div>
+              <div className="merch-slider__element">
+                <img className="merch-slider__image" src="./img/promo_prod_slider_3.png" alt="Элемент слайдера"/>
+              </div>
+              <div className="merch-slider__element">
+                <img className="merch-slider__image" src="./img/promo_prod_slider_4.png" alt="Элемент слайдера"/>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="contact-us">
+        <div className="container">
+          <h2 className="section__title">У вас своя <span className="uppercase">уникальная</span> идея по разработке мерча?</h2>
+          <img className="merch__background" src="./img/idea.svg" aria-hidden="true" alt="Абстрактное изображение идеи"/>
+          <p className="merch__description">Изготовим мерч по вашему дизайну. Расскажем лайфхаки и ознакомим с технологией производства, предоставим образцы матералов.</p>
+          <form className="merch-form" onSubmit={handleSubmit}>
+            <h3 className="merch-form__text">Введите свои контактные данные, и наш менеджер свяжется с Вами в течении 1 часа</h3>
+            <div className="merch-form__inputs">
+              <label className="merch-form__label">
+                <input className="merch-form__input" type="text" placeholder="Ваше имя" required />
+              </label>
+              <label className="merch-form__label">
+                <input className="merch-form__input" type="email" placeholder="Ваша электронная почта" required />
+              </label>
+              <label className="merch-form__label">
+                <input className="merch-form__input" type="text" placeholder="Ваш номер телефона" required />
+              </label>
+              <button className="green-button" type="submit">Заказать</button>
+            </div>
+          </form>
+        </div>
+      </section>
+      <section className="partners">
+        <div className="container">
+          <h2 className="section__title">С нами сотрудничают</h2>
+          <ul className="partners-list">
+            <li className="partners-element"><img src="./img/logo_nike.svg" alt=""/></li>
+            <li className="partners-element"><img src="./img/logo_coca-cola.svg" alt=""/></li>
+            <li className="partners-element"><img src="./img/logo_atlas-weekend.svg" alt=""/></li>
+            <li className="partners-element"><img src="./img/logo_megogo.svg" alt=""/></li>
+            <li className="partners-element"><img src="./img/logo_crazybox.svg" alt=""/></li>
+          </ul>
+        </div>
+      </section>
+      <footer className="footer">
+        <svg version="1.0" xmlns="http://www.w3.org/2000/svg" className="background-curve" viewBox="0 0 1000.000000 50.000000" preserveAspectRatio="xMidYMid meet">
+          <g transform="translate(0.000000,50.000000) scale(0.100000,-0.100000)" fill="none" stroke="none">
+            <path d="M150 469 c664 -167 1814 -317 2940 -384 415 -24 436 -25 900 -40
+1567 -52 3299 22 4600 196 502 66 1103 175 1345 243 43 12 -643 14 -4925 14
+l-4975 0 115 -29z" fill="#FFFFFF"
+            />
+          </g>
+        </svg>
+        <div className="container footer__layout">
+          <div className="footer__bottom">
+            <img className="footer__logo" src="./img/logo.svg" alt="Логотип gifts &amp; merch"/>
+            <p className="footer__slogan">Свежее дыхание в корпоративной жизни</p>
+            <p className="footer__phone">+380 630 130 103</p>
+            <p className="footer__email">example@gmail.com</p>
+          </div>
+          <div className="footer_categories">
+            <h3>Категории</h3>
+            <p>Пошив</p>
+            <p>Все товары</p>
+            <p>Наборы</p>
+            <p>Производство</p>
+          </div>
+          <div className="footer__info">
+            <h3>Информация</h3>
+            <p>О нас</p>
+            <p>ЧаВо</p>
+            <p>Контакты</p>
+          </div>
+          <div className="footer__contact-form">
+            <h3>Связаться с менеджером</h3>
+            <p>Есть вопрос на который не нашли ответ? Оставьте контакт, и наш менеджер свяжется с вами</p>
+            <form className="footer__contact-form" onSubmit={handleSubmit}>
+              <input className="footer__contact-input" type="tel" placeholder="Номер телефона" required />
+              <button className="footer__submit-button" type="submit"><span className="visually-hidden">Отправить запрос за звонок</span></button>
+            </form>
+          </div>
+        </div>
+      </footer>
+    </>
   );
 }
-// TODO доделать верстку главной
-// <section className="merch"><img src="./img/" alt="Пример мерча"/>
-//   <div className="merch-description">
-//     <h2 className="merch-title">Помимо готовой продукции высокого качества, мы можем для Вас произвести одежду,
-//       аксессуры, вкусности и другое под заказ.</h2>
-//     <p className="merch-description">Благодаря личному производству мы изготавливаем большие партии в короткие сроки, а
-//       так же у Вас всегда есть возможность кастомизировать изделия.</p>
-//     <div className="merch-slider">
-//       <div className="merch-slider-element"><img src="./img/" alt="Элемент слайдера"/></div>
-//     </div>
-//   </div>
-// </section>
-// <section className="contact-us">
-//   <form className="merch-form">
-//     <h2 className="merch-form__title">У вас своя уникальная идея по разработке мерча?</h2>
-//     <p className="merch-form__description">Изготовим мерч по вашему дизайну. Расскажем лайфхаки и ознакомим с
-//       технологией производства, предоставим образцы матералов. </p>
-//     <p className="merch-form__text">Введите свои контактные данные, и наш менеджер свяжется с Вами в течении 1 часа</p>
-//     <label className="merch-form__label">
-//       <input className="merch-form__input" type="text" placeholder="Ваше имя"/>
-//     </label>
-//     <label className="merch-form__label">
-//       <input className="merch-form__input" type="text" placeholder="Ваша электронная почта"/>
-//     </label>
-//     <label className="merch-form__label">
-//       <input className="merch-form__input" type="text" placeholder="Ваш номер телефона"/>
-//     </label>
-//     <button className="order-button" type="submit">Заказать</button>
-//   </form>
-// </section>
-// <section className="partners">
-//   <div className="partners-slider">
-//     <ul className="partners-list">
-//       <li className="partners-element"><span className="visually-hidden">Компания "Кока-кола"</span></li>
-//     </ul>
-//   </div>
-// </section>
-// <footer className="footer"><img className="logo" src="./img/icons/logo.svg" alt="Логотип gifts &amp; merch"/>
-//   <p className="footer__slogan">Свежее дыхание в корпоративной жизни и жизни корпоративной дыхание свежее </p>
-// </footer>
