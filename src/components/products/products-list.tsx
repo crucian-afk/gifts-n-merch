@@ -9,7 +9,7 @@ type productsProps = {
 
 export default function ProductsList({goods}: productsProps) {
   return (
-    <section className="catalog">
+    <section>
       <div className="container">
         <ul className="product-list">
           {goods

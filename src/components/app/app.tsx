@@ -6,7 +6,7 @@ import './App.css';
 import ProductFull from '../product-full/product-full';
 import {OrderForm} from '../order/order-form';
 import ProductsList from '../products/products-list';
-import PromoProducts from '../promo-products/promo-products';
+import MainPage from '../main-page/main-page';
 import NotReadyYet from '../not-ready-yet/not-ready-yet';
 import CartList from '../cart/cart-list';
 import Layout from '../layout/layout';
@@ -20,7 +20,7 @@ export default function App(): JSX.Element {
       <BrowserRouter>
         <Routes>
           <Route path={Root} element={<Layout />}>
-            <Route index element={<PromoProducts goods={goods} type="promo" />} />
+            <Route index element={<MainPage goods={goods} type="promo" />} />
             <Route path={Products} element={<ProductsList goods={goods} />} />
             <Route path={Product} element={<ProductFull products={goods} />} />
             <Route path={UnderConstruction} element={<NotReadyYet />} />
