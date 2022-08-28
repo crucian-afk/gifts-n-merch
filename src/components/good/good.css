@@ -1,0 +1,23 @@
+.product__item {
+  max-width: 350px;
+  display: flex;
+  flex-direction: column;
+  background-color: #FFFFFF;
+}
+.product__link {
+  text-align: center;
+}
+.product__link img {
+  width: 100%;
+}
+.product__link-button {
+  width: 100%;
+}
+.product__price {
+  font-weight: bold;
+}
+.product__card-info {
+  border: none;
+  padding: 10px;
+  flex-grow: 1;
+}

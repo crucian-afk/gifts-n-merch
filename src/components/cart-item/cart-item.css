@@ -8,6 +8,11 @@
   display: flex;
   gap: 10px;
 }
+@media (max-width: 638px) {
+  .cart-item {
+    flex-direction: column;
+  }
+}
 .cart-item__info {
   display: grid;
   grid-template-columns: 200px 1fr;
@@ -15,13 +20,18 @@
   position: relative;
   flex-grow: 1;
 }
+@media (max-width: 480px) {
+  .cart-item__info {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+}
 .cart-item__image {
   position: relative;
   max-width: 135px;
 }
 .cart-item__promo {
   position: absolute;
-  /*font-weight: bold;*/
   color: #fff;
   padding: 5px 10px;
   background-color: #1890ff;
@@ -45,10 +55,14 @@
   margin: 0 15px;
 }
 .cart-item__price {
+  min-width: 65px;
   font-weight: bold;
   font-size: 1.2em;
 }
-/*Блок с общей стоимостью*/
 .cart-total {
   padding: 10px;
+}
+.cart-item__controls,
+.cart-item__price {
+  align-self: center;
 }

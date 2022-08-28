@@ -35,7 +35,7 @@ export function OrderForm() {
   return (
     <div className="container">
       <div className="total">
-        Сумма заказа: &#8381; {totalPrice}
+        Общая сумма заказа: &#8381; {totalPrice}
       </div>
       <Steps current={current}>
         {steps.map((step) => (

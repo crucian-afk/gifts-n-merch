@@ -4,8 +4,7 @@ import CartEmpty from '../cart-empty/cart-empty';
 import {useAppDispatch, useAppSelector} from '../../hooks';
 import {addProduct, deleteProduct, reduceProduct} from '../../store/cart/cart-slice';
 import {Product} from '../../types/mock-types';
-import {useSelector} from 'react-redux';
-import {cartTotalPriceSelector} from '../../store/selectors/selectors';
+import {cartTotalPriceSelector, cartTotalSelector} from '../../store/selectors/selectors';
 import {AppRoute} from '../../const';
 import {Link} from 'react-router-dom';
 
@@ -21,7 +20,8 @@ export default function CartList() {
     dispatch(deleteProduct(item));
   };
   const goods = useAppSelector((state) => state.products.cartItems);
-  const totalPrice = useSelector(cartTotalPriceSelector);
+  const totalPrice = useAppSelector(cartTotalPriceSelector);
+  const totalCount = useAppSelector(cartTotalSelector);
 
   if (goods.length) {
     return (
@@ -39,8 +39,8 @@ export default function CartList() {
           ))}
         </div>
         <div className="cart-total">
-          <p>Всего элементов</p>
-          <p>Общая сумма: {totalPrice}</p>
+          <p className="cart-total__count">Всего элементов: {totalCount}</p>
+          <p className="cart-total__count">Общая сумма: &#8381; {totalPrice}</p>
           <Link className="ant-btn ant-btn-default" to={AppRoute.Order}>Перейти к оформлению</Link>
         </div>
       </div>

@@ -9,15 +9,17 @@ type productsProps = {
 
 export default function ProductsList({goods}: productsProps) {
   return (
-    <div className="container">
-      <ul className="product-list">
-        {goods
-          .filter((item) => item.type !== 'promo')
-          .map((item) => (
-            <Good item={item} key={item.id} />
-          ))}
-      </ul>
-      <ReturnButton />
-    </div>
+    <section className="catalog">
+      <div className="container">
+        <ul className="product-list">
+          {goods
+            .filter((item) => item.type !== 'promo')
+            .map((item) => (
+              <Good item={item} key={item.id} />
+            ))}
+        </ul>
+        <ReturnButton />
+      </div>
+    </section>
   );
 }

@@ -4,6 +4,7 @@ import {Link} from 'react-router-dom';
 import {AppRoute} from '../../const';
 import PromoItem from '../promo-item/promo-item';
 import {handleSubmit} from '../utils/utils';
+import {Carousel} from 'antd';
 
 type promoProps = {
   goods: Products;
@@ -52,7 +53,9 @@ export default function PromoProducts({goods, type = 'promo'}: promoProps): JSX.
       </section>
       <section className="merch">
         <div className="container">
-          <img className="merch__image" src="./img/promo_production.png" alt="Пример мерча"/>
+          <div className="merch__image-container">
+            <img className="merch__image" src="./img/promo_production.png" alt="Пример мерча"/>
+          </div>
           <div className="merch-description">
             <h2 className="section__title">Помимо готовой продукции высокого качества, мы можем для Вас произвести одежду, аксессуары, вкусности и другое под заказ.</h2>
             <p>Благодаря личному производству мы изготавливаем большие партии в короткие сроки, а так же у Вас всегда есть возможность кастомизировать изделия.</p>
@@ -98,54 +101,22 @@ export default function PromoProducts({goods, type = 'promo'}: promoProps): JSX.
       <section className="partners">
         <div className="container">
           <h2 className="section__title">С нами сотрудничают</h2>
-          <ul className="partners-list">
-            <li className="partners-element"><img src="./img/logo_nike.svg" alt=""/></li>
-            <li className="partners-element"><img src="./img/logo_coca-cola.svg" alt=""/></li>
-            <li className="partners-element"><img src="./img/logo_atlas-weekend.svg" alt=""/></li>
-            <li className="partners-element"><img src="./img/logo_megogo.svg" alt=""/></li>
-            <li className="partners-element"><img src="./img/logo_crazybox.svg" alt=""/></li>
-          </ul>
+          <Carousel
+            slidesToShow={3}
+            centerMode
+            draggable
+            swipeToSlide
+            touchThreshold={50}
+            focusOnSelect
+          >
+            <div className="partners-element"><img className="partners__image" src="./img/logo_nike.svg" alt=""/></div>
+            <div className="partners-element"><img className="partners__image" src="./img/logo_coca-cola.svg" alt=""/></div>
+            <div className="partners-element"><img className="partners__image" src="./img/logo_atlas-weekend.svg" alt=""/></div>
+            <div className="partners-element"><img className="partners__image" src="./img/logo_megogo.svg" alt=""/></div>
+            <div className="partners-element"><img className="partners__image" src="./img/logo_crazybox.svg" alt=""/></div>
+          </Carousel>
         </div>
       </section>
-      <footer className="footer">
-        <svg version="1.0" xmlns="http://www.w3.org/2000/svg" className="background-curve" viewBox="0 0 1000.000000 50.000000" preserveAspectRatio="xMidYMid meet">
-          <g transform="translate(0.000000,50.000000) scale(0.100000,-0.100000)" fill="none" stroke="none">
-            <path d="M150 469 c664 -167 1814 -317 2940 -384 415 -24 436 -25 900 -40
-1567 -52 3299 22 4600 196 502 66 1103 175 1345 243 43 12 -643 14 -4925 14
-l-4975 0 115 -29z" fill="#FFFFFF"
-            />
-          </g>
-        </svg>
-        <div className="container footer__layout">
-          <div className="footer__bottom">
-            <img className="footer__logo" src="./img/logo.svg" alt="Логотип gifts &amp; merch"/>
-            <p className="footer__slogan">Свежее дыхание в корпоративной жизни</p>
-            <p className="footer__phone">+380 630 130 103</p>
-            <p className="footer__email">example@gmail.com</p>
-          </div>
-          <div className="footer_categories">
-            <h3>Категории</h3>
-            <p>Пошив</p>
-            <p>Все товары</p>
-            <p>Наборы</p>
-            <p>Производство</p>
-          </div>
-          <div className="footer__info">
-            <h3>Информация</h3>
-            <p>О нас</p>
-            <p>ЧаВо</p>
-            <p>Контакты</p>
-          </div>
-          <div className="footer__contact-form">
-            <h3>Связаться с менеджером</h3>
-            <p>Есть вопрос на который не нашли ответ? Оставьте контакт, и наш менеджер свяжется с вами</p>
-            <form className="footer__contact-form" onSubmit={handleSubmit}>
-              <input className="footer__contact-input" type="tel" placeholder="Номер телефона" required />
-              <button className="footer__submit-button" type="submit"><span className="visually-hidden">Отправить запрос за звонок</span></button>
-            </form>
-          </div>
-        </div>
-      </footer>
     </>
   );
 }

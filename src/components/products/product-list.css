@@ -1,23 +1,9 @@
 .product-list {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, min-content));
+  grid-template-columns: repeat(auto-fill, minmax(300px, 25%));
   gap: 20px;
+  justify-content: center;
 }
-
-.product__item {
-  max-width: 350px;
-  display: flex;
-  flex-direction: column;
-}
-
-.product__link {
-  text-align: center;
-}
-
-.product__link img {
-  width: 100%;
-}
-
-.product__link-button {
-  width: 100%;
+.catalog {
+  background-color: #c7c7c7;
 }

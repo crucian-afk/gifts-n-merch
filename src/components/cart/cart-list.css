@@ -4,9 +4,19 @@
   gap: 10px;
   min-width: 65%;
 }
+@media (max-width: 640px) {
+  .cart-items {
+    min-width: 100%;
+  }
+}
 .cart-list {
   display: flex;
+  flex-wrap: wrap;
 }
 .cart-total {
   flex-grow: 1;
+}
+.cart-total__count {
+  font-size: 1.2em;
+  font-weight: bold;
 }

@@ -12,7 +12,7 @@ export function ClientData() {
       layout="horizontal"
     >
       <Form.Item label="E-mail">
-        <Input />
+        <Input type="email" placeholder="example@yahoo.com" />
       </Form.Item>
       <Form.Item
         required
@@ -50,9 +50,7 @@ export function DeliveryData() {
 
       <Tabs
         defaultActiveKey="1"
-        style={{
-          height: 220,
-        }}
+        style={{minHeight: '420px'}}
       >
         <TabPane tab='Доставка' key={1}>
           <Form.Item label="Фамилия, имя получателя">
@@ -94,15 +92,17 @@ type PayDataProps = {
 }
 export function PayData({handler}: PayDataProps) {
   return (
-    <div className="payment">
-      Выберите платежную систему
-      <div className="payment__buttons">
-        <button className="payment__button payment__button--cash" onClick={handler}>Наличные</button>
-        <button className="payment__button payment__button--sber">Сбербанк</button>
-        <button className="payment__button payment__button--crypto">Криптовалюта</button>
-        <button className="payment__button payment__button--confirm">Подтвердить</button>
+    <>
+      <div className="payment">
+        Выберите платежную систему
+        <div className="payment__buttons">
+          <button className="payment__button payment__button--cash" onClick={handler}>Наличные</button>
+          <button className="payment__button payment__button--sber">Сбербанк</button>
+          <button className="payment__button payment__button--crypto">Криптовалюта</button>
+          <button className="payment__button payment__button--confirm">Подтвердить</button>
+        </div>
       </div>
       <p>Подтверждая заказ, Вы соглашаетесь с условиями политики конфиденциальности и правилами продажи.</p>
-    </div>
+    </>
   );
 }

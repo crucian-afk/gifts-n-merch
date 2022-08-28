@@ -19,14 +19,31 @@
   flex-grow: 1;
   text-align: right;
 }
+.header__link--right .ant-badge {
+  padding-right: 10px;
+}
 .active {
   color: tomato;
 }
 .header-top {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 .header-top .green-button {
   font-size: 1.2em;
   font-weight: bold;
+}
+.logo {
+  margin-bottom: 20px;
+}
+@media (max-width: 850px) {
+  .logo-image {
+    width: 300px;
+  }
+}
+@media (max-width: 660px) {
+  .logo-image {
+    width: 200px;
+  }
 }

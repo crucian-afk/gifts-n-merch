@@ -18,7 +18,7 @@
   overflow: hidden;
 }
 .container {
-  max-width: 1200px;
+  max-width: 1800px;
   margin: 0 auto;
   padding: 20px;
 }
@@ -34,7 +34,6 @@
   text-transform: capitalize;
 }
 .card {
-  border: 1px solid #e2e2e2;
   display: flex;
   flex-direction: column;
   transition: .3s;
@@ -88,6 +87,7 @@
 }
 .green-button {
   background-color: #1FAB8A;
+  min-width: 180px;
   width: 280px;
   border: none;
   border-radius: 30px;
@@ -107,4 +107,15 @@
 }
 .green-button:active {
   box-shadow: none;
+}
+.ant-carousel .slick-dots-bottom {
+  bottom: -23px;
+}
+.ant-carousel .slick-dots li.slick-active button {
+  background: #808080;
+  opacity: 1;
+}
+.ant-carousel .slick-dots li button {
+  background: #b0b0b0;
+  opacity: 1;
 }

@@ -5,6 +5,7 @@ import {Button, Rate} from 'antd';
 import {useState} from 'react';
 import {useAppDispatch} from '../../hooks';
 import {addProduct} from '../../store/cart/cart-slice';
+import {colorIcon} from '../utils/utils';
 
 type paramsProps = {
   id: string;
@@ -34,14 +35,15 @@ export default function ProductFull({products}: productFullProps) {
   return (
     <div className="container product__info">
       <div className="photo">
-        <img src={`/img/${type}_${id}.jpg`} alt={`${color} ${shortName}`} width={150} height={200} />
+        <img src={`/img/${type}_${id}.jpg`} alt={`${color} ${shortName}`} width={180} height="auto" />
       </div>
       <div className="info">
         <h2>{name}</h2>
-        <p>{color}</p>
-        <p>{price}</p>
+        <p>Цвет: <span style={colorIcon(color)} /></p>
+        <span className="cart-item__size" aria-label="размер" title="размер">{size}</span>
+        <p className="product__price">&#8381; {price}</p>
         <span>{size}</span>
-        <span>{fabric}</span>
+        <span>Состав: {fabric}</span>
         <p>{description}</p>
         <Rate tooltips={desc} onChange={setRateValue} value={rateValue} />
         {rateValue && <span className="ant-rate-text">{desc[rateValue - 1]}</span>}

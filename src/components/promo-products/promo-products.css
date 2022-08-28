@@ -6,11 +6,40 @@
   background-image:
     url("../../../public/img/bg_promo.png"),
     linear-gradient(to top left, #9796F0, #FBC7D4);
-  background-repeat: no-repeat;
-  background-position: 70% 0;
-  background-size: contain;
+  background-repeat: no-repeat, no-repeat;
+  background-position: 77% 100%, 0;
+  background-size: 37%, 100%;
   padding-bottom: 87px;
   border-bottom-right-radius: 50% 10%;
+}
+@media (max-width: 600px) {
+  .promo {
+    background-image:
+      url("../../../public/img/bg_promo_small.png"),
+      linear-gradient(to top left, #9796F0, #FBC7D4);
+    margin-bottom: 0;
+  }
+}
+@media (max-width: 768px) {
+  .promo {
+    padding-bottom: 0;
+    margin-bottom: 220px;
+  }
+  .promo .container {
+    position: relative;
+  }
+}
+@media (max-width: 1370px) {
+  .promo {
+    background-position-x: 100%;
+    background-size: 600px, 100%;
+  }
+}
+@media (max-width: 1070px) {
+  .promo {
+    background-position-x: 100%;
+    background-size: 450px, 100%;
+  }
 }
 .section__title {
   font-weight: bold;
@@ -23,6 +52,17 @@
   max-width: 50%;
   margin-bottom: 20px;
 }
+@media (max-width: 480px) {
+  .promo__large-text {
+    font-size: 1.5em;
+    max-width: initial;
+  }
+}
+@media (max-width: 768px) {
+  .promo__large-text {
+    max-width: 75%;
+  }
+}
 .promo__under-large {
   max-width: 50%;
   margin-bottom: 30px;
@@ -31,6 +71,19 @@
 .promo__features {
   display: flex;
   align-items: end;
+}
+@media (max-width: 768px) {
+  .promo__features {
+    position: absolute;
+    bottom: -50%;
+  }
+}
+@media (max-width: 600px) {
+  .promo__features {
+    flex-direction: column;
+    position: initial;
+    align-items: flex-start;
+  }
 }
 .promo__feature {
   font-size: 1.2em;
@@ -75,15 +128,19 @@
 }
 .merch-slider {
   display: flex;
+  flex-wrap: wrap;
 }
 .merch-slider__element {
-  width: 130px;
-  height: 130px;
+  width: 110px;
+  height: 110px;
 }
 .merch-slider__image {
   width: 100%;
 }
 .merch__image {
+  width: 100%;
+}
+.merch__image-container {
   width: 50%;
 }
 .merch__description {
@@ -115,7 +172,14 @@
 }
 .merch-form__inputs {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
+}
+@media (max-width: 600px) {
+  .merch-form__inputs {
+    flex-direction: column;
+    row-gap: 30px;
+  }
 }
 .merch-form__label {
   min-width: 22%;
@@ -139,8 +203,17 @@
   flex-wrap: wrap;
   justify-content: space-between;
 }
+@media (max-width: 768px) {
+  .partners__image {
+    max-width: 150px;
+  }
+}
+@media (max-width: 600px) {
+  .partners__image {
+    max-width: 100px;
+  }
+}
 .footer {
-  /*background-image: url("../../../public/img/curve-background.svg");*/
   background-color: #EAE6EF;
 }
 .background-curve {
@@ -148,12 +221,10 @@
   height: auto;
   margin-top: -6px;
 }
-.footer__logo {
-  margin-bottom: 30px;
-}
 .footer__layout {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   gap: 20px;
 }
 .footer__contact-form {
