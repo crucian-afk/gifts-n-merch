@@ -47,6 +47,11 @@
     background-size: 450px, 100%;
   }
 }
+@media (max-width: 600px) {
+  .promo {
+    background-position-x: 190px, 0;
+  }
+}
 .section__title {
   font-weight: bold;
   font-size: 2em;
