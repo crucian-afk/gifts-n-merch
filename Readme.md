@@ -4,6 +4,15 @@
 
 [Посмотреть демо](https://gifts-merch.vercel.app/)
 
+## Локально развернуть:
+После форка 
+```
+git clone git@github.com:crucian-afk/gifts-n-merch.git
+```
+А затем в терминале
+```
+npm start
+```
 # На чем написано
 
 * React 17
