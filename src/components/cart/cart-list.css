@@ -20,3 +20,7 @@
   font-size: 1.2em;
   font-weight: bold;
 }
+.cart-total__delete-button {
+  margin-top: 20px;
+  display: block;
+}

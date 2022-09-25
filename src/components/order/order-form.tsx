@@ -4,18 +4,21 @@ import {ClientData, DeliveryData, PayData} from './order-data';
 import './order-form.css';
 import {cartTotalPriceSelector} from '../../store/selectors/selectors';
 import {useNavigate} from 'react-router-dom';
-import {useAppSelector} from '../../hooks';
+import {useAppDispatch, useAppSelector} from '../../hooks';
+import {clearBasket} from '../../store/cart/cart-slice';
 
 export function OrderForm() {
   const {Step} = Steps;
 
   const navigate = useNavigate();
   const totalPrice = useAppSelector(cartTotalPriceSelector);
+  const dispatch = useAppDispatch();
   const [current, setCurrent] = useState(0);
   const next = () => setCurrent(current + 1);
   const prev = () => setCurrent(current - 1);
   const handleAlert = () => {
-    message.success('Обработка завершена!');
+    message.success('Ваш заказ принят, спасибо!');
+    dispatch(clearBasket());
     setTimeout(() => navigate('/'), 2000);
   };
   const steps = [
